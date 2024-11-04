@@ -1,0 +1,107 @@
+/* Full-page background with the enhanced image */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/home/rkolagotla/Downloads/Secure_Cloud_23_10_2024/Secure_Cloud/frontend/src/components/image2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay with less opacity for better background visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Title at the top with margin adjustment to move it upwards */
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 7rem 0; /* Move the title up by reducing bottom margin */
+    padding: 0 1rem;
+}
+
+/* Login container with a darker background for contrast */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker translucent background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Header style inside the form */
+.login-header {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields with white background for readability */
+.login-input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Text color inside the input */
+.login-input input {
+    color: #333333;
+}
+
+.login-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Brighter label color */
+.MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.9); /* Brighter label color */
+}
+
+/* Button with high contrast */
+.login-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.login-links a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    color: #d1d1d1;
+    text-decoration: underline;
+}

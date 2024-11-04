@@ -1,0 +1,35 @@
+.animation-container {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.file-icon {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  animation: moveToCloud 2s ease-in-out infinite;
+}
+
+.cloud-icon {
+  position: absolute;
+  top: 0;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+/* Keyframe animation for moving the file up to the cloud */
+@keyframes moveToCloud {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    bottom: 100px;
+    opacity: 0;
+  }
+}

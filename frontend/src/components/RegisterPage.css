@@ -1,0 +1,86 @@
+/* Full-page background image with a dark overlay */
+.register-page {
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('/home/rkolagotla/Downloads/Secure_Cloud_23_10_2024/Secure_Cloud/frontend/src/components/image2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dark overlay for better contrast with the form */
+.register-overlay {
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity for desired darkness */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Main container for the register card with translucency */
+.register-card {
+    background-color: rgba(0, 0, 0, 0.75); /* Dark translucent background */
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Title styling */
+.register-header {
+    font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Styling for text fields */
+.register-input {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.register-button {
+    margin-top: 1.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.7rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the "Already have an account?" link */
+.login-link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
