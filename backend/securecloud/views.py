@@ -198,9 +198,9 @@ def register(request):
         # Commit the transaction
         conn.commit()
         last_id = cur.lastrowid
-        if not os.path.exists("/home/rkolagotla/raja/" + str(last_id)):
-            os.makedirs("/home/rkolagotla/raja/" + str(last_id))
-            os.makedirs("/home/rkolagotla/raja/" + str(last_id) + "/.decoy")
+        if not os.path.exists("C://Users//rajas//Downloads//" + str(last_id)):
+            os.makedirs("C://Users//rajas//Downloads//" + str(last_id))
+            os.makedirs("C://Users//rajas//Downloads//" + str(last_id) + "/.decoy")
         msg = {"success": "Registration Successfull"}
     except sqlite3.Error as e:
         # Handle any SQLite-related errors
@@ -225,7 +225,7 @@ def upload(request):
         user_id = request.POST.get("user_id", None)
         phrase = request.POST.get("phrase", None)
         # user_id = json.loads(request.body)["user_id"]
-        dir_path = "/home/rkolagotla/raja/" + str(user_id)
+        dir_path = "C://Users//rajas//Downloads//" + str(user_id)
         msg = {}
         status = 0
         if not os.path.exists(dir_path) or user_id is None:
@@ -311,7 +311,7 @@ def files_list(request):
     if request.method == "POST":
         # user_id = request.POST.get("user_id", None)
         user_id = json.loads(request.body)["user_id"]
-        dir_path = "/home/rkolagotla/raja/" + str(user_id)
+        dir_path = "C://Users//rajas//Downloads//" + str(user_id)
         file_details = []
         if not os.path.exists(dir_path) or user_id is None:
             msg = {"error": "Invalid User"}
@@ -365,7 +365,7 @@ def download(request):
         user_id = json.loads(request.body)["user_id"]
         fileName = json.loads(request.body)["fileName"]
         enteredphrase = json.loads(request.body)["phrase"]
-        dir_path = "/home/rkolagotla/raja/" + str(user_id)
+        dir_path = "C://Users//rajas//Downloads//" + str(user_id)
         file_path = dir_path + "/" + fileName
         msg = {}
 
@@ -454,7 +454,7 @@ def delete_file(request):
         # user_id = request.POST.get("user_id", None)
         user_id = json.loads(request.body)["user_id"]
         fileName = json.loads(request.body)["fileName"]
-        dir_path = "/home/rkolagotla/raja/" + str(user_id)
+        dir_path = "C://Users//rajas//Downloads//" + str(user_id)
         file_path = dir_path + "/" + fileName
         msg = {}
         print("delete_file", file_path, os.path.isfile(file_path))
